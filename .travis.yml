@@ -1,0 +1,19 @@
+language: bash
+
+sudo: required
+
+services:
+  - docker
+
+notifications:
+  email:
+    recipients:
+      - travis@23-5.eu
+    on_success: always
+    on_failure: always
+
+script: 
+  - ls -al
+  - date
+  - docker run -v .:/host ansi/antikeimenabuildenv 
+  - ls -al
