@@ -92,12 +92,16 @@ void motor_set_speed(void){
 
     }
 
-    motor_left.write(motor_current_speed_left);
-    motor_right.write(motor_current_speed_right);
-
     if(motor_current_speed_left == 90 && motor_current_speed_right == 90){
+        // We set speed here to 0 aka 90 to make sure power is off before we trigger the brake
+        motor_left.write(motor_current_speed_left);
+        motor_right.write(motor_current_speed_right);
         digitalWrite(PIN_MOTOR_BREAK, LOW);
     }else{
+        // We open the break before we apply power to the motors
         digitalWrite(PIN_MOTOR_BREAK, HIGH);
+        motor_left.write(motor_current_speed_left);
+        motor_right.write(motor_current_speed_right);
     }
+
 }
