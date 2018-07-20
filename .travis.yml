@@ -29,3 +29,4 @@ deploy:
   secret_access_key: ${AWS_KEY}
   bucket: "ansi-antikeimena"
   local_dir: upload/
+  acl: public_read
