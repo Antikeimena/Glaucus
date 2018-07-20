@@ -13,7 +13,9 @@ notifications:
     on_failure: always
 
 script: 
+  - git clone https://github.com/Antikeimena/Sisyphus.git
+  - mkdir Glaucus
+  - cp -r Main Glaucus  
   - ls -al
-  - date
-  - docker run -v ${PWD}:/host ansi/antikeimenabuildenv 
+  - docker run -v ${PWD}:/host ansi/antikeimenabuildenv build.sh 
   - ls -al
