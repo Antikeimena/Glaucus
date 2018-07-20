@@ -22,7 +22,7 @@ script:
 
 deploy:
   skip_cleanup: true
-  file: firmware.hex
+  file: Glaucus/firmware.hex
   provider: s3
   access_key_id: ${AWS_ID}
   secret_access_key: ${AWS_KEY}
