@@ -19,6 +19,7 @@ script:
   - ls -al
   - docker run -v ${PWD}:/host ansi/antikeimenabuildenv /build.sh 
   - ls -al
+  - mkdir upload
   - cp Glaucus/firmware.hex upload/firmware.hex
 
 deploy:
