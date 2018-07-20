@@ -60,3 +60,6 @@ Odometrie-Test/.piolibdeps
 
 GPS-Test/.pioenvs
 GPS-Test/.piolibdeps
+
+# protobuf
+Main/lib/nanopb
