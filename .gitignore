@@ -54,3 +54,9 @@ dkms.conf
 # Platformio
 Main/.pioenvs
 Main/.piolibdeps
+
+Odometrie-Test/.pioenvs
+Odometrie-Test/.piolibdeps
+
+GPS-Test/.pioenvs
+GPS-Test/.piolibdeps
