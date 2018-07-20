@@ -19,3 +19,11 @@ script:
   - ls -al
   - docker run -v ${PWD}:/host ansi/antikeimenabuildenv /build.sh 
   - ls -al
+
+deploy:
+  skip_cleanup: true
+  file: firmware.hex
+  provider: s3
+  access_key_id: ${AWS_ID}
+  secret_access_key: ${AWS_KEY}
+  bucket: "ansi-antikeimena"
