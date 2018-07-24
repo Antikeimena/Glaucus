@@ -49,9 +49,9 @@ void uplink_sendStatus(void){
 
     antikeimena_Status status_pb = antikeimena_Status_init_zero;
 
-    status_pb.version       = 12;
+    status_pb.version       = 1;
     status_pb.uptime        = millis();
-    status_pb.sensorInError = 14;
+    status_pb.sensorInError = 0;
     status_pb.debug         = uplink_debug;
 
     pb_ostream_t stream = pb_ostream_from_buffer(uplink_send_buffer, sizeof(uplink_send_buffer));
