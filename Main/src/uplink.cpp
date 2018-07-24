@@ -79,8 +79,8 @@ void uplink_sendSensor(void){
 
     antikeimena_Sensor sensor_pb = antikeimena_Sensor_init_zero;
 
-    sensor_pb.odometry_left   = odometry_get_left_counter();
-    sensor_pb.odometry_right  = odometry_get_right_counter();
+    sensor_pb.odometry_left   = 23; //odometry_get_left_counter();
+    sensor_pb.odometry_right  = 42; //odometry_get_right_counter();
     sensor_pb.battery_voltage = battery_voltage;
     sensor_pb.ultrasonic_01   = ultrasonic_distance[0];
     sensor_pb.ultrasonic_02   = ultrasonic_distance[1];
